@@ -23,6 +23,15 @@
 			<result>/WEB-INF/page/hello.jsp</result>
 		</action>
 	</package>
+	
+	<package name="year" namespace="/control/employee" extends="struts-default">
+		<action name="year" class="cn.itcast.DateAction">
+			<result name="success">/WEB-INF/page/hello.jsp</result>
+			<result name="input">/WEB-INF/page/hello.jsp</result>
+		</action>
+		
+	</package>
+	
 	<package name="validate" extends="struts-default">
 		<action name="validate" class="cn.itcast.MyDemo" >
 			<result name="success">/validate.jsp</result>

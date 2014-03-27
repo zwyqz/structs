@@ -6,9 +6,9 @@
 </head>
 <body>
 <s:form action="upload" namespace="/test"
-enctype="multipart/form-data" method="post">
-<s:file name="upload" label="输入要上传的文件名" />
-<s:submit value="上传" />
+	enctype="multipart/form-data" method="post">
+	<s:file name="upload" label="输入要上传的文件名" />
+	<s:submit value="上传" />
 </s:form>
 
   

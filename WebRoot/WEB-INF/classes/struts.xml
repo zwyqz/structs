@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="itcast" namespace="/control/employee" extends="struts-default">
+		<action name="list" class="cn.itcast.MyList" method="mydo">
+			<result name="success">/WEB-INF/page/hello.jsp</result>
+			<result name="negative">/WEB-INF/page/negative.jsp</result>
+			<result name="positive">/WEB-INF/page/positive.jsp</result>
+		</action>
+		<action name="Sum" class="cn.itcast.MyList">
+
+			<result name="negative">/WEB-INF/page/negative.jsp</result>
+			<result name="positive">/WEB-INF/page/positive.jsp</result>
+			<result name="Min" type="redirect">/Min.jsp</result>
+		</action>
+		<action name="addUI">
+			<result>/WEB-INF/page/hello.jsp</result>
+		</action>
+	</package>
+	<package name="validate" extends="struts-default">
+		<action name="validate" class="cn.itcast.MyDemo" >
+			<result name="success">/validate.jsp</result>
+			<result name="input">/validate.jsp</result>
+		</action>
+	</package>
+	
+	 <package name="demo" extends="struts-default" namespace="/test">
+        <action name="new_validate" class="action.NewValidateAction">
+            <result name="input">/validate_form.jsp</result>
+            <result name="success">/validate_form.jsp</result>
+        </action>
+    </package>
+</struts>

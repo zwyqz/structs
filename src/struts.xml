@@ -4,6 +4,9 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <constant name="struts.multipart.maxSize" value="10701096"/>
 	<package name="itcast" namespace="/control/employee" extends="struts-default">
 		<action name="list" class="cn.itcast.MyList" method="mydo">
 			<result name="success">/WEB-INF/page/hello.jsp</result>
@@ -27,8 +30,15 @@
 		</action>
 	</package>
 	
+	<package name="Action" namespace="/test" extends="struts-default">
+		<action name="upload" class="action.UploadAction" method="upload">
+			<result name="success">/upload.jsp</result>
+			<result name="input">/validate_form.jsp</result>
+		</action>
+	</package>
+	
 	 <package name="demo" extends="struts-default" namespace="/test">
-        <action name="new_validate" class="action.NewValidateAction">
+        <action name="new_validate" class="action.NewValidateAction" >
             <result name="input">/validate_form.jsp</result>
             <result name="success">/validate_form.jsp</result>
         </action>
